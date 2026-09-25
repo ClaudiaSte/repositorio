@@ -1,9 +1,13 @@
-import random
-n = int(input('Digite um número de 1 a 5: '))
-num = [1, 2, 3, 4, 5]
-random.choice(num)
-print('O número sorteado foi {}'.format(random.choice(num)))
-if n == random.choice(num):
-    print('Você acertou!')
+from random import randint
+from time import sleep
+computador = randint(0, 5) #faz o computador "pensar"
+print('-=-' * 20)
+print('Vou pensar em um número entre 0 e 5. Tente adivinhar...')
+print('-=-' * 20)
+jogador = int(input("Em que número eu pensei? ")) #jogador tenta adivinhar      
+print('PROCESSANDO...')
+sleep(2) #faz o computador "pensar" (0 a 5): ")) #jogador tenta adivinhar
+if jogador == computador:
+    print('Parabéns! Você conseguiu me vencer!')
 else:
-    print('Você errou!')
+    print('Ganhei! Eu pensei no número {} e não no {}!'.format(computador, jogador))
